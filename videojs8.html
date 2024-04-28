@@ -10,9 +10,7 @@
     </video>
 
     <script>
-        var player = videojs('vjs-video', {
-            autoplay: 'any'
-        });
+        var player = videojs('vjs-video');
         player.one('playing', function () {
             console.log(player.currentSources());
         });
