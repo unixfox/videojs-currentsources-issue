@@ -1,0 +1,21 @@
+<head>
+    <link href="https://vjs.zencdn.net/7.21.5/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.21.5/video.min.js"></script>
+</head>
+
+<body>
+    <video id="vjs-video" class="video-js vjs-default-skin" width="640" height="360" controls>
+        <source src="/videojs-currentsources-issue/source1.mp4" type="video/mp4" />
+        <source src="/videojs-currentsources-issue/source2.mp4" type="video/mp4" />
+    </video>
+
+    <script>
+        var player = videojs('vjs-video', {
+            autoplay: 'any'
+        });
+        player.one('playing', function () {
+            console.log(player.currentSources());
+        });
+    </script>
+
+</body>
